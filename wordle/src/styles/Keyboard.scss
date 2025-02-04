@@ -1,0 +1,74 @@
+/* Styles for the keyboard container */
+.keyboard {
+  font-size: 1.25rem;
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Styling for each key row */
+.keyboard .keyRow {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+}
+
+/* Base styling for keys */
+.keyboard .key {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #818384; /* Default color for all keys */
+  border-radius: 5px;
+  width: 40px;
+  height: 60px;
+  font-weight: 600;
+  transition: background-color 0.3s linear;
+  cursor: pointer;
+}
+
+/* Styling for 'absent' keys */
+.keyboard .key--absent {
+  background-color: #3a3a3c; /* Gray for absent */
+}
+
+/* Styling for 'present' keys */
+.keyboard .key--present {
+  background-color: #b59f3b; /* Yellow for present */
+}
+
+/* Styling for 'correct' keys */
+.keyboard .key--correct {
+  background-color: #538d4e; /* Green for correct */
+}
+
+/* Styling for Enter and Backspace keys */
+.keyboard .enter,
+.keyboard .backspace {
+  font-size: 0.75rem;
+  width: 60px; /* Wider keys for Enter and Backspace */
+}
+
+/* Media query for smaller screens (max-width: 700px) */
+@media only screen and (max-width: 700px) {
+  .keyboard {
+    font-size: 1rem;
+    gap: 6px;
+  }
+
+  .keyboard .keyRow {
+    gap: 4px;
+  }
+
+  .keyboard .key {
+    width: 30px;
+    height: 40px;
+  }
+
+  .keyboard .enter,
+  .keyboard .backspace {
+    font-size: 0.75rem;
+    width: 60px;
+  }
+}
